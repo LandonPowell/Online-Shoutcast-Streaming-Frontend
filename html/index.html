@@ -1,0 +1,23 @@
+$def with (name, livestream, donate)
+<!doctype html>
+<html>
+<head>
+    <title> $name </title>
+    <link rel="stylesheet" href="/static/index.css" type="text/css" />
+    <script> var donateLink = "$donate".replace("&amp;", "&"); </script>
+</head>
+<body>
+    <h1 id="currentSong"></h1>
+    <audio src="$livestream" autoplay></audio>
+
+    <div id="controls">
+        <img class="button" id="play" src="/static/pauseButton.png"/>
+        <img class="button" id="donate" src="/static/donateButton.png"/>
+        <span id="currentListeners"></span>
+    </div>
+</body>
+
+<script src="/static/jquery.js"></script>
+<script src="/static/index.js"></script>
+
+</html>
